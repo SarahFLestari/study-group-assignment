@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ public class Activity2 extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.textView2);
         textView.setText(message);
         et = (EditText) findViewById(R.id.Msg3);
+        Log.d("Halo", "-------"); Log.d("Saya lagi di", "onCreate");
     }
 
     public void REPLY(View view) {

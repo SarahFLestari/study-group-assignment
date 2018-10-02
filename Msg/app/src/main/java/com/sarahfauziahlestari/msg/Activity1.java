@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class Activity1 extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.reply);
         et = (EditText) findViewById(R.id.msg2);
         textView.setText(message);
+        Log.d("Halo", "-------"); Log.d("Saya lagi di", "onCreate");
 
     }
 
@@ -34,5 +36,34 @@ public class Activity1 extends AppCompatActivity {
             startActivity(intent);
         }
 
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("Saya lagi di","onPause");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("Saya lagi di","onRestart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("Saya lagi di","onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("Saya lagi di","onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("Saya lagi di","onDestroy");
     }
 }
