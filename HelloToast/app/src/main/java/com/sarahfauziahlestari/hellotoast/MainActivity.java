@@ -24,6 +24,6 @@ public class MainActivity extends AppCompatActivity {
         String a = tv.getText().toString();
         int count = Integer.parseInt(a);
         count = count + 1;
-        tv.setText(count);
+        tv.setText(Integer.toString(count));
     }
 }
